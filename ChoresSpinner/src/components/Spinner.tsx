@@ -50,8 +50,8 @@ export default function Spinner({chores}) {
   return (
     <>
     {chores.length > 1 && 
-    <div className="relative w-[340px] h-[340px] md:w-[410px] md:h-[410px] flex items-center justify-center p-4">
-     <button onClick={Rotation} className='p-8 bg-red-400 rounded-full'>Spin</button>
+    <div className="relative   flex items-center justify-center p-4">
+     <button onClick={Rotation} className='w-24 h-10 rounded-lg bg-blue-600 hover:duration-500 hover:bg-blue-400'>Spin</button>
       <div className="relative w-[300px] h-[300px] md:w-[368px] md:h-[368px] p-4">
         <Doughnut
           data={data}

@@ -23,17 +23,17 @@ const handleClick = () => {
 
 
   return (
-    <div className='w-full mx-auto justify-center grid mt-12'>
+    <div className='w-full mx-auto justify-center grid pt-4'>
         <div className='flex'>
             <input type='text' placeholder='Add chore' onChange={e => setChoresName(e.target.value)} ref={inputRef} /> 
-            <button className='w-32 p-2 bg-green-600' 
+            <button className='w-32 p-2 bg-green-600 rounded-e-lg hover:duration-700 hover:bg-green-400' 
             onClick={() => {
                 handleClick()
             }}> 
             Add Chore 
             </button>
         </div>
-        <button className='mt-2 w-32 p-2 bg-red-600' onClick={clearAllChores}> 
+        <button className='mt-2 w-32 p-2 rounded-lg bg-red-600 hover:duration-700 hover:bg-red-400' onClick={clearAllChores}> 
             Clear all chores 
         </button>
 
