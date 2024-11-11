@@ -1,18 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Chart } from "chart.js"; // Import Chart.js modules
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Chart, Colors } from "chart.js"; // Import Chart.js modules
 import { Doughnut } from "react-chartjs-2"; // Import Doughnut chart from react-chartjs-2
 
 // Register necessary components with ChartJS
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// Dataset for the spin wheel
-const datasetValues = [
-  { value: 50, color: "#8f7f8f", label: "ai" },
-  { value: 30, color: "#f97066", label: "be" },
-  { value: 70, color: "#2e90fa", label: "ci" },
-  { value: 40, color: "#fdb022", label: "de" },
-  { value: 60, color: "#ee46bc", label: "ei" },
-  { value: 20, color: "#854CFF", label: "fe" },
+const spinnerColors = [
+   "#8f7f8f", "#f97066", "#2e90fa", "#fdb022", "#ee46bc", "#854CFF"
 ];
 
 export default function Spinner({chores}) {
@@ -29,7 +23,7 @@ export default function Spinner({chores}) {
     datasets: [
       {
         data: chores.map((item) => item.value),
-        backgroundColor: '#f97066',
+        backgroundColor: [...spinnerColors],
         borderColor: '#854CFF',
         cutout: "50%", // Adjusted for a larger gap
         rotation: randomRotation,
